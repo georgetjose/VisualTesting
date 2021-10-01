@@ -12,13 +12,12 @@ public class MyVisualTest
     private static Percy percy;
 
     @Test
-    public void gtjTest() throws Exception
+    public void gtjTest()
     {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         percy = new Percy(driver);
         driver.get("https://www.calculator.net/random-number-generator.html?slower=1&supper=100&ctype=1&s=169&submit1=Generate");
-        Thread.sleep(5000);
         percy.snapshot("Random Number Example");
         driver.close();
 
